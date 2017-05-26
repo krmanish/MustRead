@@ -1,0 +1,10 @@
+sudo apt-get install mtpfs mtp-tools
+sudo mkdir /media/MTPdevice
+sudo chmod 775 /media/MTPdevice
+sudo mtpfs -o allow_other /media/MTPdevice  # Required each time connectine to mobile
+
+# Make sure unmount before pluging-out cable
+
+sudo umount mtpfs
+
+# As of now it mount the mob dir as read only and need to make sure it has both read and write access.
