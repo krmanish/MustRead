@@ -1,0 +1,12 @@
+## SSH to target host with special user (root) as default
+
+# Create/open ~/.ssh/config file and add below line
+
+Host abc*  192.168.*.*
+User root
+
+
+
+## For abc server when going by IP address, don't save the host key, so that we can't check it.
+Host abc* 192.168.22.*
+UserKnownHostsFile /dev/null
